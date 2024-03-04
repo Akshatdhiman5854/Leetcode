@@ -20,7 +20,7 @@ class Solution {
                 power -= tokens[i];
                 i++;
                 score++;
-                ans = Math.max(ans, score);
+                ans = ans>score? ans: score;
             }
             else if(score >= 1) {
                 power += tokens[j];
@@ -30,7 +30,6 @@ class Solution {
             else {
                 break;
             }
-            
         }
 
         return ans;

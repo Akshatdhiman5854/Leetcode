@@ -5,19 +5,33 @@ class Solution {
         }
 
         int ans = 0;
+        int dep = 0;
         int n = s.length();
-        Stack<Character> st = new Stack<>();
 
-        for(int i=0; i<n; i++) {
-            if(s.charAt(i) == '(') {
-                st.push('(');
+        for(char ch: s.toCharArray()) {
+            if( ch == '(') {
+                dep++;
             }
-            else if(s.charAt(i) == ')') {
-                ans = ans > st.size()? ans: st.size();
-                st.pop();
+
+            ans = ans > dep? ans: dep;
+
+            if(ch == ')') {
+                dep--;
             }
         }
-
         return ans;
     }
 }
+
+
+
+// Stack<Character> st = new Stack<>();
+// for(int i=0; i<n; i++) {
+//     if(s.charAt(i) == '(') {
+//         st.push('(');
+//     }
+//     else if(s.charAt(i) == ')') {
+//         ans = ans > st.size()? ans: st.size();
+//         st.pop();
+//     }
+// }

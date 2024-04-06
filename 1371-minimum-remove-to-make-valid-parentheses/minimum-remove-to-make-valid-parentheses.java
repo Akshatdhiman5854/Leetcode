@@ -1,10 +1,5 @@
 class Solution {
     public String minRemoveToMakeValid(String s) {
-        if(s.length() == 0) {
-            return "";
-        }
-
-
         Stack<Character> st = new Stack<>();
         int op = 0;
         int cl = 0;

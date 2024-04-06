@@ -3,9 +3,7 @@ class Solution {
         if(s.length() == 0) {
             return "";
         }
-        if(s.length() == 1 && (s.charAt(0) == '(' || s.charAt(0) == ')')) {
-            return "";
-        }
+
 
         Stack<Character> st = new Stack<>();
         int op = 0;

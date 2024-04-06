@@ -4,9 +4,9 @@ class Solution {
         int op = 0;
         int cl = 0;
         String ss = "";
-
+        char ch;
         for(int i = 0; i<s.length(); i++) {
-            char ch = s.charAt(i);
+            ch = s.charAt(i);
             if(ch == '(') {
                 op++;
             }
@@ -23,9 +23,8 @@ class Solution {
             }
         }
 
-
         while(!st.isEmpty()) {
-            char ch = st.pop();
+            ch = st.pop();
 
             if(op > cl && ch == '(') {
                 op--;

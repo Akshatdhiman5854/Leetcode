@@ -8,32 +8,27 @@ class Solution {
         int n = s.length();
         for(int i = 0; i<n; i++) {
             ch = s.charAt(i);
-            if(ch == '(') {
+            if(ch == '(')
                 op++;
-            }
-            else if(ch == ')') {
+            else if(ch == ')') 
                 cl++;
-            }
 
             if(cl > op) {
                 cl--;
                 continue;
             }
-            else {
+            else 
                 st.push(ch);
-            }
         }
         n = st.size();
         while(n != 0) {
             ch = st.pop();
             n--;
 
-            if(op > cl && ch == '(') {
+            if(op > cl && ch == '(') 
                 op--;
-            }
-            else {
+            else 
                 ss = ch + ss;
-            }
         }
 
         return ss;

@@ -5,7 +5,8 @@ class Solution {
         int cl = 0;
         String ss = "";
         char ch;
-        for(int i = 0; i<s.length(); i++) {
+        int n = s.length();
+        for(int i = 0; i<n; i++) {
             ch = s.charAt(i);
             if(ch == '(') {
                 op++;
@@ -22,9 +23,10 @@ class Solution {
                 st.push(ch);
             }
         }
-
-        while(!st.isEmpty()) {
+        n = st.size();
+        while(n != 0) {
             ch = st.pop();
+            n--;
 
             if(op > cl && ch == '(') {
                 op--;

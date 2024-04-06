@@ -10,7 +10,8 @@ class Solution {
         int cl = 0;
         String ss = "";
 
-        for(char ch: s.toCharArray()) {
+        for(int i = 0; i<s.length(); i++) {
+            char ch = s.charAt(i);
             if(ch == '(') {
                 op++;
             }

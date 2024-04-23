@@ -9,8 +9,7 @@ class Solution {
         int i = 0;
         int j = n - 1;
         int k = n - 1;
-        int a = nums[i] * nums[i];
-        int b = nums[j] * nums[j];
+        int a, b;
 
         while(i <= j) {
             a = nums[i] * nums[i];

@@ -10,10 +10,11 @@ class Solution {
 
         for(int i=1; i<arr.length; i++) {
             if(Math.abs(arr[i]-arr[i-1]) == mindiff) {
-                List<Integer> t = new ArrayList<>();
-                t.add(arr[i-1]);
-                t.add(arr[i]);
-                ans.add(t);
+                // List<Integer> t = new ArrayList<>();
+                // t.add(arr[i-1]);
+                // t.add(arr[i]);
+                // ans.add(t);
+                ans.add(Arrays.asList(new Integer[]{arr[i-1],arr[i]}));
             }
         }
         return ans;

@@ -6,7 +6,8 @@ class Solution {
         // Store the positions of each character in the ring
         for (int i = 0; i < r.length; i++) {
             int c = r[i] - 'a';
-            if (positions[c] == null) positions[c] = new ArrayList<>();
+            if (positions[c] == null) 
+                positions[c] = new ArrayList<>();
             positions[c].add(i);
         }
         
@@ -20,10 +21,12 @@ class Solution {
     // Recursive function with memoization
     int helper(int index, int pos, List<Integer>[] positions, char[] key, char[] ring, int[][] dp) {
         // If all characters of the key have been matched, return 0
-        if (index == key.length) return 0;
+        if (index == key.length) 
+            return 0;
         
         // If this state has already been computed, return the cached result
-        if (dp[index][pos] > 0) return dp[index][pos];
+        if (dp[index][pos] > 0) 
+            return dp[index][pos];
         
         // Current character in the key
         char target = key[index];

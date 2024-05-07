@@ -9,17 +9,23 @@
  * }
  */
 class Solution {
+    int max = Integer.MIN_VALUE;
     public ListNode removeNodes(ListNode head) {
-        // if(head == null || head.next == null) {
-        //     return head;
-        // }
-        // head = recur(head, Integer.MIN_VALUE);
+        if(head == null) return null;
 
-        // return head;
-
-        if (head == null) return null;
         head.next = removeNodes(head.next);
-        return head.next != null && head.val < head.next.val ? head.next : head;
+
+        max = max > head.val? max: head.val;
+
+        if(max > head.val) {
+            return head.next;
+        }
+
+        return head;
+
+        // if (head == null) return null;
+        // head.next = removeNodes(head.next);
+        // return head.next != null && head.val < head.next.val ? head.next : head;
     }
 
 }

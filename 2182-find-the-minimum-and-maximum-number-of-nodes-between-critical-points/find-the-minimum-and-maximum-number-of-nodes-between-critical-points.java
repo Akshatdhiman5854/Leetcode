@@ -48,7 +48,7 @@ class Solution {
 
         // list.remove(Integer.valueOf(max));
         // smax = Collections.max(list);
-        Collections.sort(list);
+        // Collections.sort(list);
         int max = list.get(list.size() - 1);
         int min = list.get(0);
 

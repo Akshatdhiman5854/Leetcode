@@ -1,6 +1,6 @@
 class Solution {
     public double averageWaitingTime(int[][] customers) {
-        int wait[] = new int[customers.length];
+        // int wait[] = new int[customers.length];
 
         int ti = customers[0][0];
         int n = customers.length;

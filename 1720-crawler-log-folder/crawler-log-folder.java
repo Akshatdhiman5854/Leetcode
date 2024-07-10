@@ -5,12 +5,14 @@ class Solution {
         for(String s : logs) {
             if(s.equals("./")) {
                 continue;
-            } else if(!st.isEmpty() && s.equals("../")) {
-                st.pop();
-            } else {
-                if(!s.equals("../")) {
-                    st.push(s);
+            } else if(s.equals("../")) {
+                if(!st.isEmpty()) {
+                    st.pop();
+                } else {
+                    continue;
                 }
+            } else {
+                st.push(s);
             }
         }
 

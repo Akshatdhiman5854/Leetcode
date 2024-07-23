@@ -3,10 +3,12 @@ class Solution {
         Map<Integer, Integer> mp = new HashMap<>();
         int n = nums.length;
         Integer ans[] = new Integer[n];
+        int i = 0;
         
-        for(int i = 0; i < n; i++) {
-            mp.put(nums[i], mp.getOrDefault(nums[i], 0) + 1);
-            ans[i] = nums[i];
+        for(int x : nums) {
+            mp.put(x, mp.getOrDefault(x, 0) + 1);
+            ans[i] = x;
+            i++;
         }
         
         Arrays.sort(ans, (n1, n2) -> {
@@ -17,8 +19,10 @@ class Solution {
             }
         });
 
-        for(int i = 0; i < n; i++) {
-            nums[i] = ans[i];
+        i = 0;
+        for(int x : ans) {
+            nums[i] = x;
+            i++;
         }
 
         return nums;

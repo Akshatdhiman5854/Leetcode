@@ -20,11 +20,12 @@ class Solution {
         }
 
 
+        if(root.left == null && root.right == null)
+            return 1;
+        
         int lh = minDepth(root.left);
         int rh = minDepth(root.right);
 
-        if(root.left == null && root.right == null)
-            return 1;
         
         if(root.left == null)
             return rh + 1;

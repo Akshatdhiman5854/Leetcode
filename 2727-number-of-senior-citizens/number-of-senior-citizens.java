@@ -7,13 +7,8 @@ class Solution {
         int n = details.length;
         int ans = 0;
         for(int i = 0; i < n; i++) {
-            String s = details[i];
-            String ss = "";
-            ss += s.charAt(11);
-            ss += s.charAt(12);
-            System.out.println(s);
-            System.out.println(ss);
-            if(Integer.parseInt(ss) > 60) {
+            String s = details[i].substring(11, 13);
+            if(Integer.parseInt(s) > 60) {
                 ans++;
             }
         }

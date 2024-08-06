@@ -14,14 +14,14 @@ class Solution {
 
     }
 
-    public void backtrack(String combination, String next_digit, String[] phone_map, List<String> ans) {
-        if(next_digit.length() == 0) {
-            ans.add(combination);
-        } 
+    public void backtrack(String s, String digit, String[] str, List<String> ans) {
+        if(digit.length() == 0) {
+            ans.add(s);
+        }
         else {
-            String letters = phone_map[next_digit.charAt(0) - '0'];
+            String letters = str[digit.charAt(0) - '0'];
             for(char letter : letters.toCharArray()) {
-                backtrack(combination + letter, next_digit.substring(1), phone_map, ans);
+                backtrack(s + letter, digit.substring(1), str, ans);
             }
         }
     }

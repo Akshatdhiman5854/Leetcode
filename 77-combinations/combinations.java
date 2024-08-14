@@ -18,9 +18,9 @@ class Solution {
         }
 
         for(int i = indx; i <= n; i++) {
-            if(list.contains(i)) {
-                continue;
-            }
+            // if(list.contains(i)) {
+            //     continue;
+            // }
             list.add(i);
             backtrack(list, n, i + 1);
             list.removeLast();

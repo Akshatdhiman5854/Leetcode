@@ -11,17 +11,37 @@
 class Solution {
 
     public int gcd(int x, int y) {
-        int ans = x < y? x : y;
+        //Euclidean algorithm
 
-        while(ans > 0) {
-            if(x % ans == 0 && y % ans == 0) {
-                break;
-            }
-            ans--;
+        if(x == 0) {
+            return y;
         }
 
-        return ans;
+        if(y == 0) {
+            return x;
+        }
+
+        if(x == y) {
+            return x;
+        }
+
+        if(x > y) {
+            return gcd((x - y), y);
+        }
+
+        return gcd(x, (y - x));
     }
+
+    // public int gcd(int x, int y) {
+    //     int ans = x < y? x : y;
+    //     while(ans > 0) {
+    //         if(x % ans == 0 && y % ans == 0) {
+    //             break;
+    //         }
+    //         ans--;
+    //     }
+    //     return ans;
+    // }
 
 
     public ListNode insertGreatestCommonDivisors(ListNode head) {

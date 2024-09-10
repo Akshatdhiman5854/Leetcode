@@ -13,12 +13,8 @@ class Solution {
     public int gcd(int x, int y) {
         //Euclidean algorithm
 
-        if(x == 0) {
-            return y;
-        }
-
-        if(y == 0) {
-            return x;
+        if(x == 1 || y == 1) {
+            return 1;
         }
 
         if(x == y) {

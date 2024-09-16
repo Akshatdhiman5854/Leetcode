@@ -16,7 +16,7 @@ class Solution {
         // find minimum difference across adjacent elements
         int ans = Integer.MAX_VALUE;
         for (int i = 0; i < minutes.length - 1; i++) {
-            ans = Math.min(ans, minutes[i + 1] - minutes[i]);
+            // ans = Math.min(ans, minutes[i + 1] - minutes[i]);
             ans = ans < (minutes[i + 1] - minutes[i]) ? ans : (minutes[i + 1] - minutes[i]);
         }
 

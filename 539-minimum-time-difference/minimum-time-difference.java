@@ -17,6 +17,7 @@ class Solution {
         int ans = Integer.MAX_VALUE;
         for (int i = 0; i < minutes.length - 1; i++) {
             ans = Math.min(ans, minutes[i + 1] - minutes[i]);
+            ans = ans < (minutes[i + 1] - minutes[i]) ? ans : (minutes[i + 1] - minutes[i]);
         }
 
         // consider difference between last and first element
